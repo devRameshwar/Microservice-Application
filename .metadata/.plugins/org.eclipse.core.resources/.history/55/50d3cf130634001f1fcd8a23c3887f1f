@@ -1,0 +1,4 @@
+spring.application.name=AppConfigService
+
+
+#https://github.com/devRameshwar/ConfigServer.git

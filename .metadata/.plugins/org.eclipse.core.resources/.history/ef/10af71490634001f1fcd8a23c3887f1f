@@ -1,0 +1,9 @@
+spring.application.name=AppConfigService
+
+server.port=9889
+server.servlet.context-path=/config
+
+#github properties
+spring.cloud.config.server.git.uri=https://github.com/devRameshwar/ConfigServer.git
+spring.cloud.config.server.git.skip-ssl-validation=true
+spring.cloud.config.server.git.default-label=master

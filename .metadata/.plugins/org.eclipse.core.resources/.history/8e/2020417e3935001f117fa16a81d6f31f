@@ -1,0 +1,11 @@
+#seting the profile name
+spring.profiles.active=flipkartUserService
+
+
+#config Server property
+spring.config.import=optional:configserver:http://localhost:9889/config
+
+
+
+ 
+

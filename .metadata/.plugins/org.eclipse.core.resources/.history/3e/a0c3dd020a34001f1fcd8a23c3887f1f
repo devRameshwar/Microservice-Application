@@ -1,0 +1,15 @@
+spring.application.name=FlipkartOrder
+
+
+#setting debug lavel
+#logging.level.org.springframework.cloud=debug
+
+
+#config Server property
+spring.config.import=optional:configserver:http://localhost:9889/config
+
+#port setting
+server.port=9090
+
+#Eureka Server URl
+eureka.client.service-url.defaultZone=http://localhost:8761/eureka/

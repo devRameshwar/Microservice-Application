@@ -1,0 +1,25 @@
+spring.application.name=AppGateway
+
+
+server.port=8888
+
+#Eureka Server URl
+eureka.client.service-url.defaultZone=http://localhost:8761/eureka/
+
+spring.cloud.gateway.discovery.locator.enabled=true
+
+#setting lowercase property
+spring.cloud.gateway.discovery.locator.lower-case-service-id=true
+
+#config Server property
+spring.config.import=optional:configserver:http://localhost:9889/config
+ 
+#setting debug lavel
+#logging.level.org.springframework.cloud=debug
+
+#UserMicroservices
+#localhost:1010/flipkart/user
+#spring.cloud.gateway.routes[0].id=FlipkartUserService
+#.cloud.gateway.routes[0].predicates[0]=path=/flipkart/**
+#spring.cloud.gateway.routes[0].uri=localhost:1010/flipkart/user
+

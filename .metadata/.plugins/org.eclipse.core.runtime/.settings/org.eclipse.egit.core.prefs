@@ -1,0 +1,9 @@
+GitRepositoriesView.GitDirectories=E\:\\Reactive_Playground\\.git;
+GitRepositoriesView.GitDirectories.relative=E\:\\Reactive_Playground\\.git;
+RepositoryGroups.uuids=
+core_autoIgnoreDerivedResources=false
+core_git_servers=
+core_preferredMergeStrategy=jgit-default-mergeStrategy
+core_remote_connection_timeout=180
+core_ssh_default_agent=\\\\.\\pageant
+eclipse.preferences.version=1

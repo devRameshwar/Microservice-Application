@@ -1,0 +1,19 @@
+spring.application.name=ServiceDiscovery
+
+
+server.port=8761
+
+
+#stoping self registration as a client again
+eureka.client.register-with-eureka=false
+
+#Fatching Microservice Registration
+eureka.client.fetch-registry=false
+
+
+#config Server property
+spring.config.import=optional:configserver:http://localhost:9889/config
+
+#setting debug lavel
+#logging.level.org.springframework.cloud=debug
+
