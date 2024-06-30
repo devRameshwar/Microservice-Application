@@ -7,8 +7,8 @@
         <option value="$PROJECT_DIR$/AppConfigService/pom.xml" />
         <option value="$PROJECT_DIR$/ServiceDiscovery/pom.xml" />
         <option value="$PROJECT_DIR$/AppGateway/pom.xml" />
-        <option value="$PROJECT_DIR$/FlipkartOrder/pom.xml" />
         <option value="$PROJECT_DIR$/FlipkartUserService/pom.xml" />
+        <option value="$PROJECT_DIR$/FlipkartOrder/pom.xml" />
       </list>
     </option>
   </component>

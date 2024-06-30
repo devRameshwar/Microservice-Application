@@ -25,7 +25,7 @@ public class OrderController {
     Logger logger=LoggerFactory.getLogger(OrderController.class);
 
 	@PostMapping(path = "/create")
-	public ResponseEntity<OrderDetailsResponce> postMethodName(@RequestBody OrderDetailsResquest  request) {
+	public ResponseEntity<OrderDetailsResponce> createOrder(@RequestBody OrderDetailsResquest  request) {
 		logger.info("request Data: "+request);
 		return new ResponseEntity<>(this.service.saveOrder(request),HttpStatus.CREATED);
 	}
