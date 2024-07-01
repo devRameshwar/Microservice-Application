@@ -1,0 +1,21 @@
+package flipkart.com.request;
+
+import java.util.Date;
+
+public class OrderDetailsResquest {
+	
+	private String orderName;
+
+	private String qty;
+
+	private Float price;
+
+	private String orderStatus;
+
+	private String shippingAddress;
+
+	private String billingAddress;
+
+	private Date orderDate;
+
+}
