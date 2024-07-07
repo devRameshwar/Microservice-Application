@@ -14,9 +14,9 @@ public class kafkaConfig {
     @Bean
     NewTopic newTopic() {
         return TopicBuilder.name(ApplicationConstant.CREATE_ORDER_TOPICS)
-                .partitions(3)
-                .replicas(3)
-                .configs(Map.of("min.insync.replicas", "2"))
+                .partitions(1)
+                .replicas(1)
+                .configs(Map.of("min.insync.replicas", "1"))
                 .build();
     }
 

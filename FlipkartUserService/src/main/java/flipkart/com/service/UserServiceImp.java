@@ -23,10 +23,10 @@ public class UserServiceImp implements UserService {
 	@Autowired
 	private OrderServiceFeignclient orderServiceFeignclient;
 
-	private final Logger LOGGER=LoggerFactory.getLogger(UserServiceImp.class);
+	private final Logger LOGGER = LoggerFactory.getLogger(UserServiceImp.class);
 
 	@Autowired
-	private KafkaTemplate<String ,ResponseEntity<OrderDetailsResponce>> kafkaTemplate;
+	private KafkaTemplate<String, ResponseEntity<OrderDetailsResponce>> kafkaTemplate;
 
 	Logger logger = LoggerFactory.getLogger(UserServiceImp.class);
 
@@ -43,14 +43,16 @@ public class UserServiceImp implements UserService {
 		ResponseEntity<OrderDetailsResponce> createOrder = orderServiceFeignclient.createOrder(request);
 		logger.info("response getting from Order Service: " + request);
 
-		CompletableFuture<SendResult<String, ResponseEntity<OrderDetailsResponce>>> future =
-				kafkaTemplate.send(ApplicationConstant.CREATE_ORDER_TOPICS,request.getOrderName(), orderServiceFeignclient.createOrder(request));
+		CompletableFuture<SendResult<String, ResponseEntity<OrderDetailsResponce>>> future = kafkaTemplate.send(
+				ApplicationConstant.CREATE_ORDER_TOPICS, request.getOrderName(),
+				orderServiceFeignclient.createOrder(request));
 
-		CompletableFuture<SendResult<String, ResponseEntity<OrderDetailsResponce>>> completableFuture = future.whenComplete((result, exception) -> {
+
+		future.whenComplete((result, exception) -> {
 			if (exception != null) {
 
 			} else {
-				LOGGER.info("Result after getting success response: "+result.getRecordMetadata());
+				LOGGER.info("Result after getting success response: " + result.getRecordMetadata());
 			}
 		});
 
