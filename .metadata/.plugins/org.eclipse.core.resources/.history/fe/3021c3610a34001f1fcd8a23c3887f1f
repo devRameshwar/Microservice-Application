@@ -1,8 +1,0 @@
-spring.application.name=FlipkartUserService
-
-
-server.port=9093
-
-#Eureka Server URl
-eureka.client.service-url.defaultZone=http://localhost:8761/eureka/
-

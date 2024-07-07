@@ -1,5 +1,0 @@
-package flipkart.com.orderFeignClient;
-
-public interface OrderServiceFeignclient {
-
-}
